@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vervolg &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/migration4';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Perspectief twee" href="migration2.html" />
+    <link rel="prev" title="Perspectief 1" href="migration1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="migration3.html">Data Story: Het verband tussen de levenstandaarden in een land en migratie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migration1.html">Perspectief 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Vervolg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migration2.html">Perspectief twee</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/migration4.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/migration4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/migration4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vervolg</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-migratie-en-leefomstandigheden-landen-met-de-meeste-migratie">Argument 2: Migratie en leefomstandigheden, landen met de meeste migratie</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="vervolg">
+<h1>Vervolg<a class="headerlink" href="#vervolg" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.offline</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.subplots</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uuid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        </script>
+        <script type="module">import "https://cdn.plot.ly/plotly-3.0.1.min"</script>
+        </div></div>
+</div>
+<section id="argument-2-migratie-en-leefomstandigheden-landen-met-de-meeste-migratie">
+<h2>Argument 2: Migratie en leefomstandigheden, landen met de meeste migratie<a class="headerlink" href="#argument-2-migratie-en-leefomstandigheden-landen-met-de-meeste-migratie" title="Link to this heading">#</a></h2>
+<p>Zoals eerder beargumenteerd is er sprake van migratie bij historische gebeurtenissen wat de leefomstandigheden van een land omlaag haalt, maar is er ook migratie als het land geen historische gebeurtenis ervaart maar gewoon een gemiddelde slechte leefomstandigheden heeft?
+Daarom zal er verder worden gekeken naar het verband van de levensstandaarden en de migratiecijfers van de top 20 landen met de meeste migratie over de tijdsperiode van onze datasets. De 20 landen die we gaan gebruiken voor verder onderzoek zijn hieronder in de figuur aangegeven.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pip</span> install xlrd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting xlrd
+  Using cached xlrd-2.0.2-py2.py3-none-any.whl.metadata (3.5 kB)
+Using cached xlrd-2.0.2-py2.py3-none-any.whl (96 kB)
+Installing collected packages: xlrd
+Successfully installed xlrd-2.0.2
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;P_Data_Extract_From_Global_Bilateral_Migration.xlsx&#39;</span><span class="p">)</span>
+
+
+<span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;API_SP.POP.TOTL_DS2_en_excel_v2_124779.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="n">pop</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1960 [1960]&#39;</span><span class="p">,</span> <span class="s1">&#39;1970 [1970]&#39;</span><span class="p">,</span> <span class="s1">&#39;1980 [1980]&#39;</span><span class="p">,</span> <span class="s1">&#39;1990 [1990]&#39;</span><span class="p">,</span> <span class="s1">&#39;2000 [2000]&#39;</span><span class="p">]</span>
+
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="n">mig</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">mig</span><span class="p">[</span><span class="n">year</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+    <span class="n">year_short</span> <span class="o">=</span> <span class="n">year</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">year_short</span> <span class="ow">in</span> <span class="n">pop</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">pop</span><span class="p">[</span><span class="n">year_short</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">pop</span><span class="p">[</span><span class="n">year_short</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">buttons</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Create one bar chart per year</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+    <span class="n">year_short</span> <span class="o">=</span> <span class="n">year</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">year_short</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pop</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ Skipping </span><span class="si">{</span><span class="n">year_short</span><span class="si">}</span><span class="s2"> — not in population data.&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+
+    <span class="n">mig_year</span> <span class="o">=</span> <span class="n">mig</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country Origin Name&#39;</span><span class="p">)[</span><span class="n">year</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">pop_year</span> <span class="o">=</span> <span class="n">pop</span><span class="p">[[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">year_short</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mig_year</span><span class="p">,</span> <span class="n">pop_year</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;Country Origin Name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[</span><span class="n">merged</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+
+
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[</span><span class="n">merged</span><span class="p">[</span><span class="n">year_short</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1_000_000</span><span class="p">]</span>
+
+
+    <span class="n">merged</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">merged</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">/</span> <span class="n">merged</span><span class="p">[</span><span class="n">year_short</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[</span><span class="n">merged</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">]</span>
+    
+    <span class="c1"># Get top 20 countries by % migrated</span>
+    <span class="n">top_20</span> <span class="o">=</span> <span class="n">merged</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;% Migrated&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">top_20</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">],</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">top_20</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">],</span>
+        <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">top_20</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span>
+        <span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+        <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+        <span class="n">hovertext</span><span class="o">=</span><span class="p">[</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/b&gt;&lt;br&gt;&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Migrants: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="n">year</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&lt;br&gt;&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Population: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="n">year_short</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&lt;br&gt;&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;% Migrated: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span>
+            <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">top_20</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="n">visible</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">year_short</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">top_20</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">],</span>
+            <span class="n">colorscale</span><span class="o">=</span><span class="s1">&#39;Viridis&#39;</span><span class="p">,</span>
+            <span class="n">cmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">cmax</span><span class="o">=</span><span class="n">merged</span><span class="p">[</span><span class="s1">&#39;% Migrated&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+    <span class="p">)))</span>
+
+
+    <span class="n">visibility</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
+    <span class="n">visibility</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">year_short</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;update&#39;</span><span class="p">,</span>
+                        <span class="n">args</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;visible&#39;</span><span class="p">:</span> <span class="n">visibility</span><span class="p">},</span>
+                              <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Top 20 Countries (&gt;1M pop) by % Migrated (</span><span class="si">{</span><span class="n">year_short</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">}]))</span>
+
+<span class="c1"># Layout</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">updatemenus</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">buttons</span><span class="o">=</span><span class="n">buttons</span><span class="p">,</span>
+        <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>
+        <span class="n">showactive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
+        <span class="n">xanchor</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">yanchor</span><span class="o">=</span><span class="s1">&#39;top&#39;</span>
+    <span class="p">)],</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Top 20 Countries (&gt;1M population) by % Population Migrated (1960)&#39;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f Population Migrated&#39;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span>
+    <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\site-packages\pandas\compat\_optional.py:135,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\importlib\__init__.py:126,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="ne">--&gt; </span><span class="mi">126</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1050,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1027,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1004,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;openpyxl&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;P_Data_Extract_From_Global_Bilateral_Migration.xlsx&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;API_SP.POP.TOTL_DS2_en_excel_v2_124779.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">pop</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\site-packages\pandas\io\excel\_base.py:495,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">io</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\site-packages\pandas\io\excel\_base.py:1567,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options, engine_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1564</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
+<span class="g g-Whitespace">   </span><span class="mi">1565</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage_options</span> <span class="o">=</span> <span class="n">storage_options</span>
+<span class="ne">-&gt; </span><span class="mi">1567</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engines</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span>
+<span class="g g-Whitespace">   </span><span class="mi">1568</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_io</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1569</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1570</span>     <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1571</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\site-packages\pandas\io\excel\_openpyxl.py:552,</span> in <span class="ni">OpenpyxlReader.__init__</span><span class="nt">(self, filepath_or_buffer, storage_options, engine_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="nd">@doc</span><span class="p">(</span><span class="n">storage_options</span><span class="o">=</span><span class="n">_shared_docs</span><span class="p">[</span><span class="s2">&quot;storage_options&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">539</span>     <span class="n">engine_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">542</span><span class="sd">     Reader using openpyxl engine.</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">550</span><span class="sd">         Arbitrary keyword arguments passed to excel engine.</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">552</span>     <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;openpyxl&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">553</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">filepath_or_buffer</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span>     <span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\jupyterbook\lib\site-packages\pandas\compat\_optional.py:138,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">138</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="c1"># Handle submodules: if we have submodule, grab parent module from sys.modules</span>
+
+<span class="ne">ImportError</span>: Missing optional dependency &#39;openpyxl&#39;.  Use pip or conda to install openpyxl.
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Figuur 3: Een overzicht van de landen met de meeste migratie op basis van hoeveel procent van de bevolking geëmigreerd is.</p>
+</div></blockquote>
+<p>Deze 20 landen hierboven aangegeven zullen we vergelijken met drie indicatoren die de ontwikkeling/levensstandaarden van een land kunnen schetsen.</p>
+<p>Deze ontwikkeling zijn voornamelijk gefocust op de gezondheid van de burger en zijn als volgt:</p>
+<p>“Survival to age 65, male (% of cohort)”,
+“Mortality rate, adult, female (per 1,000 female adults)”,
+“Life expectancy at birth, total (years)”
+Door deze indicatoren in kaart te brengen samen met de migratiecijfers van de landen kunnen we per land een conclusie trekken om vervolgens de eindconclusie over ons perspectief te beantwoorden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.subplots</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
+
+<span class="n">migratie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;P_Data_Extract_From_Global_Bilateral_Migration.xlsx&quot;</span><span class="p">)</span>
+<span class="n">wb_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;P_Data_Extract_From_World_Development_Indicators.xlsx&quot;</span><span class="p">)</span>
+
+<span class="n">landen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Puerto Rico&quot;</span><span class="p">,</span> <span class="s2">&quot;Jamaica&quot;</span><span class="p">,</span> <span class="s2">&quot;Albania&quot;</span><span class="p">,</span> <span class="s2">&quot;West Bank and Gaza&quot;</span><span class="p">,</span> <span class="s2">&quot;Bosnia and Herzegovina&quot;</span><span class="p">,</span> <span class="s2">&quot;Ireland&quot;</span><span class="p">,</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">,</span> <span class="s2">&quot;Armenia&quot;</span><span class="p">,</span> <span class="s2">&quot;Trinidad and Tobago&quot;</span><span class="p">,</span> <span class="s2">&quot;Moldova&quot;</span><span class="p">,</span> <span class="s2">&quot;Kazakhstan&quot;</span><span class="p">,</span> <span class="s2">&quot;Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Azerbaijan&quot;</span><span class="p">,</span> <span class="s2">&quot;Kuwait&quot;</span><span class="p">,</span> <span class="s2">&quot;Belarus&quot;</span><span class="p">,</span> <span class="s2">&quot;Estonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Eritrea&quot;</span><span class="p">,</span> <span class="s2">&quot;El Salvador&quot;</span><span class="p">,</span> <span class="s2">&quot;Lebanon&quot;</span><span class="p">,</span> <span class="s2">&quot;Lithuania&quot;</span><span class="p">]</span>
+<span class="n">indicatoren</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Survival to age 65, male (</span><span class="si">% o</span><span class="s2">f cohort)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mortality rate, adult, female (per 1,000 female adults)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Life expectancy at birth, total (years)&quot;</span>
+<span class="p">]</span>
+
+<span class="n">jaar_kolommen</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">migratie</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;19&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;20&#39;</span><span class="p">)]</span>
+<span class="n">jaar_kolommen</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">jaar_kolommen</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s2">&quot;secondary_y&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}]])</span>
+
+<span class="n">traces</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">valid_countries</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">land</span> <span class="ow">in</span> <span class="n">landen</span><span class="p">:</span>
+    <span class="n">migratie_uit_land</span> <span class="o">=</span> <span class="n">migratie</span><span class="p">[</span><span class="n">migratie</span><span class="p">[</span><span class="s2">&quot;Country Origin Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">land</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">migratie_uit_land</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">jaar_kolommen</span><span class="p">:</span>
+        <span class="n">migratie_uit_land</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">migratie_uit_land</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+    <span class="n">totaal_migratie</span> <span class="o">=</span> <span class="n">migratie_uit_land</span><span class="p">[</span><span class="n">jaar_kolommen</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df_migratie</span> <span class="o">=</span> <span class="n">totaal_migratie</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">df_migratie</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;Migranten&#39;</span><span class="p">]</span>
+    <span class="n">df_migratie</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_migratie</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">indicator_dfs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">indicator</span> <span class="ow">in</span> <span class="n">indicatoren</span><span class="p">:</span>
+        <span class="n">wb_row</span> <span class="o">=</span> <span class="n">wb_data</span><span class="p">[(</span><span class="n">wb_data</span><span class="p">[</span><span class="s2">&quot;Country Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">land</span><span class="p">)</span> <span class="o">&amp;</span>
+                         <span class="p">(</span><span class="n">wb_data</span><span class="p">[</span><span class="s2">&quot;Series Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">indicator</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">wb_row</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">df_empty</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Jaar&#39;</span><span class="p">:</span> <span class="n">df_migratie</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">],</span> <span class="n">indicator</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">df_migratie</span><span class="p">)})</span>
+            <span class="n">indicator_dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_empty</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">wb_jaar_kolommen</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">wb_row</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;19&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;20&#39;</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">wb_jaar_kolommen</span><span class="p">:</span>
+            <span class="n">wb_row</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_row</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+        <span class="n">df_indicator</span> <span class="o">=</span> <span class="n">wb_row</span><span class="p">[</span><span class="n">wb_jaar_kolommen</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="n">df_indicator</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">,</span> <span class="n">indicator</span><span class="p">]</span>
+        <span class="n">df_indicator</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_indicator</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">indicator_dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_indicator</span><span class="p">)</span>
+
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
+    <span class="n">df_indicator_all</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;Jaar&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">),</span> <span class="n">indicator_dfs</span><span class="p">)</span>
+
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_migratie</span><span class="p">,</span> <span class="n">df_indicator_all</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Jaar&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">merged</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="n">valid_countries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">land</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">merged</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">merged</span><span class="p">[</span><span class="s1">&#39;Migranten&#39;</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Migratie - </span><span class="si">{</span><span class="n">land</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">hovertemplate</span><span class="o">=</span><span class="s2">&quot;Jaar: %</span><span class="si">{x}</span><span class="s2">&lt;br&gt;Migranten: %</span><span class="si">{y:,}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">secondary_y</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="n">traces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Migratie - </span><span class="si">{</span><span class="n">land</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">indicator</span> <span class="ow">in</span> <span class="n">indicatoren</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">merged</span><span class="p">[</span><span class="s1">&#39;Jaar&#39;</span><span class="p">],</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">merged</span><span class="p">[</span><span class="n">indicator</span><span class="p">],</span>
+                <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">indicator</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">land</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">dash</span><span class="o">=</span><span class="s2">&quot;dot&quot;</span><span class="p">),</span>
+                <span class="n">hovertemplate</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Jaar: %</span><span class="se">{{</span><span class="s2">x</span><span class="se">}}</span><span class="s2">&lt;br&gt;</span><span class="si">{</span><span class="n">indicator</span><span class="si">}</span><span class="s2">: %</span><span class="se">{{</span><span class="s2">y:,.2f</span><span class="se">}}</span><span class="s2">&quot;</span>
+            <span class="p">),</span>
+            <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="n">traces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">indicator</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">land</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">dropdown_buttons</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">land</span> <span class="ow">in</span> <span class="n">valid_countries</span><span class="p">:</span>
+
+    <span class="n">visibility</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">trace_name</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">land</span> <span class="ow">in</span> <span class="n">trace_name</span><span class="p">:</span>
+            <span class="n">visibility</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">visibility</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">dropdown_buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">land</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;visible&quot;</span><span class="p">:</span> <span class="n">visibility</span><span class="p">},</span>
+                  <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Migratie en indicatoren voor </span><span class="si">{</span><span class="n">land</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}]</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Migratie en indicatoren per land&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Jaar&quot;</span><span class="p">,</span>
+    <span class="n">hovermode</span><span class="o">=</span><span class="s2">&quot;x unified&quot;</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;v&quot;</span><span class="p">,</span>
+        <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">1.05</span><span class="p">,</span>
+        <span class="n">bordercolor</span><span class="o">=</span><span class="s2">&quot;Black&quot;</span><span class="p">,</span>
+        <span class="n">borderwidth</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">),</span>
+    <span class="n">updatemenus</span><span class="o">=</span><span class="p">[</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">buttons</span><span class="o">=</span><span class="n">dropdown_buttons</span><span class="p">,</span>
+            <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;down&quot;</span><span class="p">,</span>
+            <span class="n">pad</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;r&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+            <span class="n">showactive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>         
+            <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>  
+            <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>            
+            <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;top&quot;</span> 
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1100</span>  
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;Migranten (aantal)&quot;</span><span class="p">,</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;Indicatorwaarde&quot;</span><span class="p">,</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">trace</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="s2">&quot;Puerto Rico&quot;</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="6aef68f7-4b89-4b7a-be86-5fd8b4ad57ef" class="plotly-graph-div" style="height:400px; width:1100px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6aef68f7-4b89-4b7a-be86-5fd8b4ad57ef")) {                    Plotly.newPlot(                        "6aef68f7-4b89-4b7a-be86-5fd8b4ad57ef",                        [{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Puerto Rico","visible":true,"x":["1960","1970","1980","1990","2000"],"y":[1341184.0,1942981.0,2322435.0,2906426.0,2981082.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Puerto Rico","visible":true,"x":["1960","1970","1980","1990","2000"],"y":[65.983142,67.90044,71.125573,70.380885,73.184633],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Puerto Rico","visible":true,"x":["1960","1970","1980","1990","2000"],"y":[137.453,121.46,95.354,99.722,79.31],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Puerto Rico","visible":true,"x":["1960","1970","1980","1990","2000"],"y":[68.627,70.352,73.101,72.827,75.514],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Jamaica","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[418639.0,543472.0,853625.0,1263827.0,1860114.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Jamaica","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[60.498537,63.574989,67.550746,74.166908,70.682923],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Jamaica","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[189.312,166.942,154.549,133.167,135.562],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Jamaica","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[63.828,66.731,68.992,71.705,71.281],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Albania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[151314.0,118564.0,99040.0,412439.0,2048024.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Albania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[54.60791,65.053856,71.805938,75.29161,78.008743],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Albania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[136.875,108.179,83.793,69.156,63.313],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Albania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[56.413,65.234,69.903,72.71,74.826],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - West Bank and Gaza","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[305093.0,147662.0,996999.0,1582365.0,1931712.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - West Bank and Gaza","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[36.545652,45.291971,56.417768,66.52557,70.150459],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - West Bank and Gaza","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[null,null,null,158.831,126.636],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - West Bank and Gaza","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[null,null,null,67.803,70.298],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Bosnia and Herzegovina","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[425073.0,700293.0,602445.0,1655460.0,2587705.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Bosnia and Herzegovina","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[52.50298,58.052823,65.320543,66.384696,74.664856],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Bosnia and Herzegovina","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[208.03,147.461,113.298,96.402,75.057],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Bosnia and Herzegovina","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[58.53,64.844,69.603,71.509,75.292],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Ireland","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[1078540.0,2246669.0,1823479.0,1927868.0,2247195.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Ireland","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[70.093088,69.391324,71.544355,76.903876,81.07687],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Ireland","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[134.742,120.538,100.655,80.635,70.026],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Ireland","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[70.19426829268295,70.90156097560977,72.59541463414635,74.84607317073171,76.53658536585367],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Georgia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[136476.0,858909.0,1134883.0,1720094.0,2279261.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Georgia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[49.12467,54.677846,60.831295,60.443427,62.849074],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Georgia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[153.352,130.331,105.43,105.772,100.756],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Georgia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[61.347,64.869,68.273,68.679,70.091],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Armenia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[779847.0,855275.0,861079.0,940667.0,1707654.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Armenia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[52.947061,57.392246,59.541413,61.919214,65.858911],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Armenia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[163.212,135.779,125.798,113.977,100.167],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Armenia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[59.063,62.64470731707318,65.13856097560976,67.54936585365854,72.88048780487806],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Trinidad and Tobago","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[124343.0,106793.0,224159.0,418566.0,614539.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Trinidad and Tobago","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[56.507425,57.821468,59.75679,61.685359,63.079293],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Trinidad and Tobago","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[223.431,201.959,179.188,173.756,157.555],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Trinidad and Tobago","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[62.505,64.869,66.507,67.591,68.629],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Moldova","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[825927.0,906959.0,881014.0,1187737.0,1286448.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Moldova","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[47.70226,51.322229,55.352125,58.798842,55.817945],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Moldova","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[227.057,210.672,185.077,156.967,153.154],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Moldova","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[59.44,62.414,65.189,67.92,67.462],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Kazakhstan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[2656674.0,3704618.0,4118173.0,5578190.0,6764727.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Kazakhstan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[43.556417,45.33111,48.223516,53.356855,43.941961],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Kazakhstan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[197.323,178.131,160.191,144.214,177.419],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Kazakhstan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[57.946,60.049,62.516,65.701,63.793],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Jordan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[292500.0,699934.0,1256784.0,1958881.0,2200488.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Jordan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[44.553466,53.15136,65.677926,71.20959,73.739792],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Jordan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[326.443,238.142,177.218,131.439,106.129],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Jordan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[52.678,59.833,66.493,70.094,71.926],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Azerbaijan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[805589.0,1129985.0,1477265.0,2033808.0,3016374.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Azerbaijan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[34.486872,42.793406,51.737122,52.656525,57.892163],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Azerbaijan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[273.201,203.461,152.417,141.683,124.847],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Azerbaijan","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[50.862,56.586,61.433,62.75,65.377],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Kuwait","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[133490.0,189664.0,323412.0,562113.0,725869.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Kuwait","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[55.468942,70.130546,72.362991,73.90371,81.473815],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Kuwait","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[185.003,104.269,89.688,74.144,68.339],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Kuwait","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[59.20334146341464,68.20204878048783,71.45548780487806,73.41714634146342,76.2258780487805],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Belarus","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[3899584.0,4567013.0,4639173.0,5058853.0,3493775.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Belarus","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[66.299656,67.272333,61.496829,60.403858,50.837932],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Belarus","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[104.51,101.532,109.577,107.204,125.338],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Belarus","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[69.25460975609757,70.74448780487806,69.92770731707319,70.83658536585365,68.91219512195123],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Estonia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[195400.0,345621.0,303803.0,381946.0,463050.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Estonia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[62.668017,62.185099,58.657212,57.820174,57.676141],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Estonia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[111.092,105.302,112.733,106.786,118.066],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Estonia","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[68.74926829268296,69.92421951219512,69.1147804878049,69.47560975609757,70.41707317073173],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Eritrea","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[473620.0,543725.0,581111.0,651007.0,718421.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Eritrea","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[23.627123,27.245431,30.154868,37.738996,46.241806],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Eritrea","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[458.122,434.488,398.575,350.825,296.901],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Eritrea","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[37.443,41.162,44.625,49.733,56.285],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - El Salvador","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[129134.0,146568.0,318591.0,1137258.0,1870497.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - El Salvador","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[36.67199,38.429229,21.643939,48.67218,57.698331],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - El Salvador","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[334.011,300.671,248.55,175.681,140.344],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - El Salvador","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[48.292,51.364,48.589,61.981,67.711],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Lebanon","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[281283.0,393599.0,881132.0,1198245.0,1353979.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Lebanon","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[59.771558,63.504742,47.726237,53.771355,77.498994],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Lebanon","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[183.512,167.092,211.435,147.438,92.867],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Lebanon","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[63.927,66.018,59.909,65.479,73.895],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMigranten: %{y:,}","line":{"width":2},"name":"Migratie - Lithuania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[1148446.0,1349788.0,1132057.0,1178272.0,1069852.0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eSurvival to age 65, male (% of cohort): %{y:,.2f}","line":{"dash":"dot"},"name":"Survival to age 65, male (% of cohort) - Lithuania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[66.045219,64.758933,60.514896,60.651297,60.581478],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eMortality rate, adult, female (per 1,000 female adults): %{y:,.2f}","line":{"dash":"dot"},"name":"Mortality rate, adult, female (per 1,000 female adults) - Lithuania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[124.275,108.701,111.573,106.923,102.974],"type":"scatter","xaxis":"x","yaxis":"y2"},{"hovertemplate":"Jaar: %{x}\u003cbr\u003eLife expectancy at birth, total (years): %{y:,.2f}","line":{"dash":"dot"},"name":"Life expectancy at birth, total (years) - Lithuania","visible":false,"x":["1960","1970","1980","1990","2000"],"y":[69.84731707317074,70.80439024390245,70.48219512195122,71.16073170731708,72.01951219512195],"type":"scatter","xaxis":"x","yaxis":"y2"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.94],"title":{"text":"Jaar"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Migranten (aantal)"}},"yaxis2":{"anchor":"x","overlaying":"y","side":"right","title":{"text":"Indicatorwaarde"}},"legend":{"orientation":"v","yanchor":"top","y":1,"xanchor":"left","x":1.05,"bordercolor":"Black","borderwidth":1},"title":{"text":"Migratie en indicatoren per land"},"hovermode":"x unified","updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Puerto Rico"}],"label":"Puerto Rico","method":"update"},{"args":[{"visible":[false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Jamaica"}],"label":"Jamaica","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Albania"}],"label":"Albania","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor West Bank and Gaza"}],"label":"West Bank and Gaza","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Bosnia and Herzegovina"}],"label":"Bosnia and Herzegovina","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Ireland"}],"label":"Ireland","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Georgia"}],"label":"Georgia","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Armenia"}],"label":"Armenia","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Trinidad and Tobago"}],"label":"Trinidad and Tobago","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Moldova"}],"label":"Moldova","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Kazakhstan"}],"label":"Kazakhstan","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Jordan"}],"label":"Jordan","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Azerbaijan"}],"label":"Azerbaijan","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Kuwait"}],"label":"Kuwait","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Belarus"}],"label":"Belarus","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Estonia"}],"label":"Estonia","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor Eritrea"}],"label":"Eritrea","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false]},{"title":"Migratie en indicatoren voor El Salvador"}],"label":"El Salvador","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false]},{"title":"Migratie en indicatoren voor Lebanon"}],"label":"Lebanon","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true]},{"title":"Migratie en indicatoren voor Lithuania"}],"label":"Lithuania","method":"update"}],"direction":"down","pad":{"r":10,"t":10},"showactive":true,"x":0.5,"xanchor":"center","y":1,"yanchor":"top"}],"height":400,"width":1100},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('6aef68f7-4b89-4b7a-be86-5fd8b4ad57ef');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<blockquote>
+<div><p>Figuur 4: Een visualisatie van de top 20 landen met de meeste emigratie tov de bevolking samen met drie indicatoren die de leefomstandigheden samenvatten van een land (Zie legenda voor kleur aanduidingen). Het doel van de visualisatie is om de lezer interactief te tonen dat ieder land niet per se een directe connectie heeft tussen migratie en slechte leefomstandigheden en dus deels het tegendeel wordt bewezen van ons perspectief.</p>
+</div></blockquote>
+<p>Uit de visualisatie hierboven aangegeven kunnen we een paar conclusies trekken. Allereerst zien we dat slechte levensomstandigheden niet altijd een garantie voor verhoging in migratiecijfers zijn, bij Puerto Rico zien we bijvoorbeeld dat het aantal migranten over de jaren heen wisselt samen met de cijfers van de gekozen indicatoren. Dit geeft wel aan dat er een verband is tussen migratie en de veranderingen in de leefomstandigheden en gezondheid van mensen, maar dat heeft niet altijd een stijging van migratie als gevolg.</p>
+<p>Uit sommige specifieke gevallen zoals Mexico eerder gegeven is deze conclusie wel te trekken. Een ander specifiek geval waar deze conclusie is te trekken is Ierland, dit land heeft een massale toename in migratie tussen de jaren 1960-1970. Deze massale toename in migratie is net zoals bij Mexico een historische gebeurtenis verbonden, tijdens deze periode heeft zich “The Troubles” afgespeeld in Noord-Ierland waar conflict en onrust het thema was in deze periode(Gilmartin, 2022). Deze historische evenementen die een slechte leefomstandigheid vormen voor de burger van zowel Mexico als Ierland laat zien dat slechte levensomstandigheden wel degelijk uitmaken voor een toename in migratie wereldwijd maar de visualisatie geeft ook het tegendeel van ons perspectief aan namelijk dat slechte leefomstandigheden niet de centrale reden is voor massale migratie wereldwijd.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="migration1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Perspectief 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="migration2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Perspectief twee</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-migratie-en-leefomstandigheden-landen-met-de-meeste-migratie">Argument 2: Migratie en leefomstandigheden, landen met de meeste migratie</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
